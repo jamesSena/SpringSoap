@@ -1,0 +1,27 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://jamesson.com.br/soap"
+           targetNamespace="http://jamesson.com.br/soap" elementFormDefault="qualified">
+
+    <xs:element name="getTestRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="testId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getTestResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="test" type="tns:test"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="test">
+        <xs:sequence>
+            <xs:element name="testId" type="xs:int"/>
+            <xs:element name="testname" type="xs:string"/>
+            <xs:element name="testCPF" type="xs:string"/>
+            <xs:element name="testRG" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>
